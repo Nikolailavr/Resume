@@ -1,14 +1,29 @@
 from misc.funcs import print_curs
+import misc.config as config
 
 
 class Man:
-    age: int
-    phone: str
-    telegram_id: str
+    age: int = 32
+    email: str = 'lntemp@yandex.ru'
+    telegram_id: str = '@NikolayLavrov'
 
 
 class Candidate(Man):
 
-    @staticmethod
-    def soft_skills():
-        print_curs('I am the best prrrroooooggrrraaammeeerrr')
+    def start(self) -> None:
+        match input():
+            case '1': print_curs(config.EDUCATION)
+            case '2': print_curs(config.EXPERIENCE)
+            case '3': print_curs(config.HARD_SKILLS)
+            case '4': print_curs(config.SOFT_SKILLS)
+            case '5': print_curs(config.ABOUT)
+            case '6': self.contacts()
+            case 'help': print_curs(config.HELP)
+            case 'exit': exit(0)
+            case _:
+                print_curs(config.BAD_COMMAND)
+
+    def contacts(self) -> None:
+        print_curs(f'email: {self.email}')
+        print_curs(f'telegram: {self.telegram_id}')
+
