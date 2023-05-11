@@ -4,7 +4,7 @@ import misc.config as config
 
 class Man:
     age: int = 32
-    email: str = 'lavrovwrk@gamil.com'
+    email: str = 'lavrovwrk@gmail.com'
     telegram_id: str = '@NikolayLavrov'
 
 
