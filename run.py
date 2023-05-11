@@ -7,6 +7,7 @@ def start():
     me = Candidate()
     print_curs(config.HELLO)
     print_curs(config.HELP)
+    print_curs(config.END_MSG)
     while True:
         try:
             me.start()
