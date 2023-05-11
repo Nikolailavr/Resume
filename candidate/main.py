@@ -25,6 +25,7 @@ class Candidate(Man):
         print_curs(config.END_MSG)
 
     def contacts(self) -> None:
+        print_curs('Лавров Николай Вячеславович')
         print_curs(f'email: {self.email}')
         print_curs(f'telegram: {self.telegram_id}')
 
