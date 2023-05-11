@@ -22,6 +22,7 @@ class Candidate(Man):
             case 'exit': exit(0)
             case _:
                 print_curs(config.BAD_COMMAND)
+        print_curs(config.END_MSG)
 
     def contacts(self) -> None:
         print_curs(f'email: {self.email}')
